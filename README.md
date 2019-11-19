@@ -7,24 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Alexander``` ```9nekra``` ```https://github.com/9nekra``` ```9nekra@gmail.com``` ```9nekra``` ```example-com-client``` ```Simple client for example.com service.``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-build/
-docs/
-config/
-src/
-tests/
-vendor/
-```
+Данный проект представляет клиента для вымышленного сервиса комментариев example.com
 
 
 ## Install
@@ -32,14 +15,19 @@ vendor/
 Via Composer
 
 ``` bash
-$ composer require 9nekra/example-com-client
+$ composer require 9nekra/example-com-client:^0.1
 ```
 
 ## Usage
 
+### Получение комментариев
 ``` php
-$skeleton = new Nekra\ExampleComClient();
-echo $skeleton->echoPhrase('Hello, League!');
+use Nekra\ExampleComClient\ExampleClientBuilder;
+
+$exampleClient = ExampleClientBuilder::create();
+$exampleClient->getComments();
+
+
 ```
 
 ## Change log

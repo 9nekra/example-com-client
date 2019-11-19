@@ -59,8 +59,12 @@ class ExampleClient
             'text' => $comment->text,
         ];
         $this->client->patch('/comment/'.$comment->id, ['json' => $json]);
-
     }
 
+
+    public function getGuzzleClient() : Client
+    {
+        return $this->client;
+    }
 
 }
