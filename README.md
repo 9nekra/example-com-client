@@ -87,4 +87,3 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-code-quality]: https://scrutinizer-ci.com/g/9nekra/example-com-client
 [link-downloads]: https://packagist.org/packages/9nekra/example-com-client
 [link-author]: https://github.com/9nekra
-[link-contributors]: ../../contributors
