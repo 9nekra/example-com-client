@@ -15,19 +15,36 @@
 Via Composer
 
 ``` bash
-$ composer require 9nekra/example-com-client:^0.1
+$ composer require 9nekra/example-com-client:^0
 ```
 
 ## Usage
 
 ### Получение комментариев
+
 ``` php
 use Nekra\ExampleComClient\ExampleClientBuilder;
 
 $exampleClient = ExampleClientBuilder::create();
-$exampleClient->getComments();
+$comments = $exampleClient->getComments();
+```
 
+### Добавление комментария
 
+``` php
+use \Nekra\ExampleComClient\Comment;
+
+$comment = new Comment(['name' => 'Name 1', 'text' => 'text two']);
+$exampleClient->postComment($comment);
+```
+
+### Изменение комментария
+
+``` php
+use \Nekra\ExampleComClient\Comment;
+
+$comment = new Comment(['id' => 1, 'name' => 'New Name 22','text' => 'text two']);
+$exampleClient->updateComment($comment);
 ```
 
 ## Change log
