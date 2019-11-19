@@ -42,4 +42,25 @@ class ExampleClient
 
         return $result;
     }
+
+    public function postComment(Comment $comment)
+    {
+        $json = [
+            'name' => $comment->name,
+            'text' => $comment->text,
+        ];
+        $this->client->post('/comment', ['json' => $json]);
+    }
+
+    public function updateComment(Comment $comment)
+    {
+        $json = [
+            'name' => $comment->name,
+            'text' => $comment->text,
+        ];
+        $this->client->patch('/comment/'.$comment->id, ['json' => $json]);
+
+    }
+
+
 }
